@@ -30,7 +30,7 @@ jobs:
       run: echo ${{ steps.read_property.outputs.value }}
       
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag 1112233/git-test-docker-repo:${{ steps.read_property.outputs.value }}
+      run: docker build . --file Dockerfile --tag 9604670877/git-test-docker-repo:${{ steps.read_property.outputs.value }}
     
     - name: Docker Push
       run: docker push 9604670877/git-test-docker-repo:${{ steps.read_property.outputs.value }}
