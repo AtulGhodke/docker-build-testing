@@ -26,8 +26,4 @@ jobs:
     
     - name: Docker Push
       run: docker push 9604670877/git-test-docker-repo:1.3
-    
-    - name: Check outputs
-      run: |
-        echo "Latest Image Tag - ${{ steps.latest_tag.outputs.tag }}"
       
