@@ -34,4 +34,14 @@ jobs:
         path: ./package.json
     - name: Echo package.json
       run: echo "${{ steps.package.outputs.content }}"
+    
+    - name: Read value from Properties-file
+      id: read_property
+      uses: christian-draeger/read-properties@1.0.1
+      with:
+        path: 'version.properties'
+        property: 'version'
+    
+    - name: Do something with your bumped release version
+      run: echo ${{ steps.read_property.outputs.value }}
       
